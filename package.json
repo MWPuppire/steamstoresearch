@@ -1,0 +1,30 @@
+{
+  "bin": {
+    "steamstoresearch": "./index.js"
+  },
+  "dependencies": {
+    "html-to-text": "^4.0.0",
+    "minimist": "^1.2.0",
+    "readline-sync": "^1.4.9",
+    "steam-store": "^0.4.1",
+    "yn": "^2.0.0"
+  },
+  "name": "steamstoresearch",
+  "version": "1.0.0",
+  "description": "A small command line tool to search Steam's store and get data from it.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwpuppire/steamstoresearch.git"
+  },
+  "keywords": [
+    "steam"
+  ],
+  "author": "MWPuppire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mwpuppire/steamstoresearch/issues"
+  },
+  "homepage": "https://github.com/mwpuppire/steamstoresearch#readme"
+}

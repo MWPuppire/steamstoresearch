@@ -21,13 +21,15 @@ function main() {
                 console.log(details[i].name);
                 console.log(htmlToText.fromString(details[i].detailed_description));
                 console.log(details[i].website);
-                var price = String(details[i].price_overview.final);
-                price = price.substring(0, price.length - 2) + "." + price.substring(price.length - 2);
-                price = details[i].price_overview.currency + " " + price;
-                if (details[i].price_overview.discount_percent != 0) {
-                    price = price + "\n" + String(details[i].price_overview.discount_percent) + "% off!";
-                };
-                console.log(price);
+                if (details[i].price_overview) {
+                    var price = String(details[i].price_overview.final);
+                    price = price.substring(0, price.length - 2) + "." + price.substring(price.length - 2);
+                    price = details[i].price_overview.currency + " " + price;
+                    if (details[i].price_overview.discount_percent != 0) {
+                        price = price + "\n" + String(details[i].price_overview.discount_percent) + "% off!";
+                    };
+                    console.log(price);
+                }
                 console.log("\n");
             };
             if (yn(readline.question("Would you like to search again? "), {default: false, lenient: true})) {
